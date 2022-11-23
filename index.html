@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://yoolk.ninja/wp-content/uploads/2021/08/Games-GenshinImpact-1024x1024.png"
+    />
+
+    <!-- Link to FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="login.css" />
+    <title>Barista Corporation Limited: Login</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="logo">
+        <img src="Images/Cartoon-People/undraw_team_up_re_84ok.svg" alt="" />
+      </div>
+
+      <form class="box" action="login.html" method="post">
+        <h1>Barista</h1>
+        <h3>
+          Welcome to Barista's <br />
+          Information Management System
+        </h3>
+
+        <div class="inputBox">
+          <input type="text" id="username" autocomplete="off" required />
+          <label class="placeholder">Username</label>
+          <i class="fa-solid fa-user" style="font-size: 1.3rem"></i>
+        </div>
+        <div class="inputBox">
+          <input type="password" id="password" required />
+          <label class="placeholder">Password</label>
+          <span
+            class="passwdIcons"
+            style="font-size: 1.3rem"
+            onclick="toggle()"
+          >
+            <i id="hide1" class="fa-solid fa-eye"></i>
+            <i id="hide2" class="fa-solid fa-eye-slash"></i>
+          </span>
+        </div>
+        <div class="forgotPasswd">
+          <a href="#" class="passwd">Forgot Password?</a>
+        </div>
+
+        <input type="submit" value="Login" class="submit-btn" />
+        <div class="otherOptions">
+          <p>New Employee? <a href="#" class="register-btn">Register</a></p>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      function toggle() {
+        var x = document.getElementById("password");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+
+        if (x.type === "password") {
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+        } else {
+          x.type = "password";
+          y.style.display = "none";
+          z.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <input type="password" name="" placeholder="Password" id="password" />
+      <input type="submit" value="Login" /> -->
